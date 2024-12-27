@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['wheat-powdery-mildew', 'wheat-septoria', 'wheat-stemrust', 'wheat-yellowrust']
+
+roboflow:
+  workspace: mohamed-ashraf-abuno
+  project: wheat-desease
+  version: 6
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/mohamed-ashraf-abuno/wheat-desease/dataset/6

@@ -1,0 +1,76 @@
+import 'package:auto_route/annotations.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:plant_analyzer/information/domain/chemical_cure.dart';
+import 'package:plant_analyzer/information/domain/disease_info.dart';
+
+import '../../core/constants.dart';
+
+@RoutePage()
+class DiseasePage extends StatelessWidget {
+  DiseasePage({Key? key, required this.info}) : super(key: key);
+
+  final DiseaseInfo info;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        title: Row(children: [
+          Image.asset('assets/images/logo2.png', width: 48, height: 48),
+          const SizedBox(width: kDefaultPadding * 0.75),
+          Text(info.name,
+              style: GoogleFonts.epilogue(
+                fontWeight: FontWeight.w700,
+                color: Colors.white,
+              ))
+        ]),
+      ),
+      body: Container(
+        color: Colors.green.shade200,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                for (String s in info.description) ParagraphString(s: s),
+                Padding(
+                  padding: const EdgeInsets.only(top: kDefaultPadding),
+                  child: Text(
+                    'Cause',
+                    style: GoogleFonts.epilogue(
+                        fontWeight: FontWeight.bold, fontSize: 24),
+                  ),
+                ),
+                for (String s in info.cause) ParagraphString(s: s),
+                Padding(
+                  padding: const EdgeInsets.only(top: kDefaultPadding),
+                  child: Text(
+                    'Chemical Cure',
+                    style: GoogleFonts.epilogue(
+                        fontWeight: FontWeight.bold, fontSize: 24),
+                  ),
+                ),
+                for (ChemicalCure cure in info.cure) ...[
+                  Padding(
+                    padding: const EdgeInsets.only(top: kDefaultPadding),
+                    child: Text(
+                      cure.name,
+                      style: GoogleFonts.epilogue(
+                          fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  for (String s in cure.description) ParagraphString(s: s),
+                ]
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+

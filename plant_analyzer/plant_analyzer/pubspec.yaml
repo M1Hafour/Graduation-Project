@@ -1,0 +1,45 @@
+name: plant_analyzer
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.1 <4.0.0"
+
+dependencies:
+  auto_route: ^7.1.0
+  dio: ^5.1.2
+  flutter:
+    sdk: flutter
+  flutter_animate: ^4.2.0
+  flutter_riverpod: ^2.3.6
+  flutter_svg: ^2.0.6
+  freezed_annotation: ^2.2.0
+  google_fonts: ^4.0.4
+  image_picker: ^0.8.7+5
+  json_annotation: ^4.8.1
+  path: ^1.8.3
+  path_provider: ^2.0.15
+  url_launcher: ^6.1.11
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+  auto_route_generator: ^7.0.0
+  json_serializable: ^6.7.0
+  build_runner:
+  freezed: ^2.3.4
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/images/logo2.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+
+flutter:
+  uses-material-design: true
+  assets:
+    # Add assets from the images directory to the application.
+    - assets/images/
