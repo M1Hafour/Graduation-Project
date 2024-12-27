@@ -13,9 +13,15 @@ We only worked on 4 diseases[powdery-mildew, septoria, stemrust, yellow-rust] wi
 ### References
 
 Roboflow-Yolov8 documentation -> https://blog.roboflow.com/whats-new-in-yolov8/
+
 CNN documentation -> https://hal.science/hal-03957224/document
-“Wheat Diseases Detection and Classification using Convolutional Neural Network (CNN) -> https://www.researchgate.net/publication/365969381_Wheat_Diseases_Detection_and_Classification_using_Convolutional_Neural_Network_CNN
+
+“Wheat Diseases Detection and Classification using Convolutional Neural Network (CNN) -> 
+
+https://www.researchgate.net/publication/365969381_Wheat_Diseases_Detection_and_Classification_using_Convolutional_Neural_Network_CNN
+
 A High Performance Wheat Disease Detection Based on Position Information -> https://www.mdpi.com/2223-7747/12/5/1191
+
 Leaf and spike wheat disease detection & classification using an improved deep convolutional architecture -> https://www.sciencedirect.com/science/article/pii/S2352914821001313
 
 ## Methodology 
