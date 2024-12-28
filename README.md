@@ -33,7 +33,4 @@ we used  different customized CNN architectures.
 
 ## Deployment
 we used Mopile application to capture images to the wheat and send it to the model then the model try to predict if that wheat plant is infected or not if it's infecte then it
-allocated the diseas by the sigmentation and write what is the diseas. 
-
-## Demo
-
+allocated the diseas by the sigmentation and write what is the diseas.
